@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+body {
+  @apply max-w-[96rem] mx-auto text-[#4e4e4e];
+}
+
+#root{
+  @apply w-full
+}
