@@ -4,6 +4,14 @@ body {
   @apply max-w-[96rem] mx-auto text-[#4e4e4e] overflow-hidden h-screen;
 }
 
-#root{
-  @apply w-full
+#root {
+  @apply w-full;
+}
+
+::-webkit-scrollbar {
+  @apply bg-transparent w-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 w-full rounded-3xl ;
 }
