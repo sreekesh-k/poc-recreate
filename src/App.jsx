@@ -6,17 +6,19 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Provider store={store}>
+    <Provider store={store}>
+      <Router>
         <Layout>
-          <Router>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Home />} />
+            <Route path="/actioncenter" element={<Home />} />
+            <Route path="/templatehub" element={<Home />} />
+            <Route path="/application" element={<Home />} />
+          </Routes>
         </Layout>
-      </Provider>
-    </>
+      </Router>
+    </Provider>
   );
 }
 
