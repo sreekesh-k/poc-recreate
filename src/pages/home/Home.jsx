@@ -20,7 +20,7 @@ function Home() {
 
           <div className=" flex items-center flex-col justify-center h-[60svh] w-full text-[#d9534f] bg-white shadow-md">
             <span className=" text-5xl">
-              <i class="fa-solid fa-chart-pie"></i>
+              <i className="fa-solid fa-chart-pie"></i>
             </span>
             <span>Pies</span>
             <span className="text-xs">
