@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="relative">
       <nav className="flex items-center shadow h-14 px-5 bg-white">
-        <h1 className="font-bold flex-1">{activeTab}</h1>
+        <h1 className="font-bold flex-1 uppercase">{activeTab}</h1>
         <div className="flex-1 "></div>
         <div className="flex-1 flex gap-8 justify-end items-center">
           <i className="fa-solid fa-magnifying-glass"></i>

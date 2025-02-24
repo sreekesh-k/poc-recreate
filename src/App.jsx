@@ -1,5 +1,8 @@
 import Layout from "./common/Layout";
 import Home from "./pages/home/Home";
+import ActionCenter from "./pages/actionCenter/ActionCenter";
+import TemplateHub from "./pages/templateHub/TemplateHub";
+import Applications from "./pages/applications/Application";
 import { Provider } from "react-redux";
 import store from "./common/redux/store/CommonStore";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -13,9 +16,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/actioncenter" element={<Home />} />
-            <Route path="/templatehub" element={<Home />} />
-            <Route path="/application" element={<Home />} />
+            <Route path="/actioncenter" element={<ActionCenter />} />
+            <Route path="/templatehub" element={<TemplateHub />} />
+            <Route path="/application" element={<Applications />} />
           </Routes>
         </Layout>
       </Router>
