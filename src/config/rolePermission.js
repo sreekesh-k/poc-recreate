@@ -1,6 +1,6 @@
 const rolePermissions = {
-  editor: ["applications", "templatehub"],
-  viewer: ["actioncenter"],
+  editor: ["dashboard", "actioncenter", "templatehub", "application"],
+  viewer: ["dashboard"],
 };
 
 export default rolePermissions;
