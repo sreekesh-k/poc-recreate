@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { logoutAction } from "../../redux/slices/authSlice";
+import { logoutAction } from "../../redux/slices/authSlice.js";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 function Header() {
