@@ -8,21 +8,44 @@ function Login() {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // const login = async (username, password) => {
+  //   try {
+  //     const response = await fetch(
+  //       `http://localhost:3000/users?username=${username}&password=${password}`
+  //     );
+  //     if (!response.ok) {
+  //       throw new Error("Failed to fetch data");
+  //     }
+
+  //     const data = await response.json();
+  //     if (data.length > 0) {
+  //       return data[0];
+  //     } else {
+  //       throw new Error("Invalid credentials");
+  //     }
+  //   } catch (e) {
+  //     setError(e.message);
+  //   }
+  // };
+  const data = {
+    users: [
+      { id: 1, username: "admin", password: "admin", role: "editor" },
+      { id: 2, username: "user", password: "user", role: "viewer" },
+    ],
+  };
+
   const login = async (username, password) => {
     try {
-      const response = await fetch(
-        `http://localhost:3000/users?username=${username}&password=${password}`
+      const user = data.users.find(
+        (u) => u.username === username && u.password === password
       );
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
 
-      const data = await response.json();
-      if (data.length > 0) {
-        return data[0];
-      } else {
+      if (!user) {
         throw new Error("Invalid credentials");
       }
+
+      return user;
     } catch (e) {
       setError(e.message);
     }
