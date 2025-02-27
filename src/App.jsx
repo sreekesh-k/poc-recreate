@@ -4,7 +4,7 @@ import ActionCenter from "./pages/actionCenter/ActionCenter";
 import TemplateHub from "./pages/templateHub/TemplateHub";
 import Applications from "./pages/applications/Application";
 import { Provider } from "react-redux";
-import store from "./common/redux/store/CommonStore";
+import store from "./redux/Store";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/dashboard/Dashboard";
 

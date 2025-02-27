@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function Header() {
-  const activeTab = useSelector((state) => state.activeTab.tabName);
+  const activeTab = useSelector((state) => state.common.tabName);
 
   return (
     <header className="relative">

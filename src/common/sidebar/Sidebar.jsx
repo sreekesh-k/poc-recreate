@@ -1,15 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setActiveTab } from "../../common/redux/slice/CommonSlice";
+import { setActiveTabAction } from "../../redux/slices/CommonSlice";
 import Icon from "../icons/Icon";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
   const dispatch = useDispatch();
-  const activeTab = useSelector((state) => state.activeTab.tabName);
+  const activeTab = useSelector((state) => state.common.tabName);
 
   const handleClick = (name) => {
-    dispatch(setActiveTab(name));
+    dispatch(setActiveTabAction(name));
   };
 
   return (

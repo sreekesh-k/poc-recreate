@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  @apply max-w-[96rem] mx-auto text-[#4e4e4e] overflow-hidden h-screen;
+  @apply max-w-[96rem] mx-auto text-[#4e4e4e] overflow-hidden h-screen bg-white;
 }
 
 #root {

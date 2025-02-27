@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import activeTabReducer from "../slice/CommonSlice";
+import CommonSlice from "./slices/CommonSlice";
 
 const store = configureStore({
   reducer: {
-    activeTab: activeTabReducer,
+    common: CommonSlice,
   },
 });
 
