@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setActiveTabAction } from "../../redux/slices/CommonSlice";
+import { setActiveTabAction } from "../../redux/slices/commonSlice";
 import Icon from "../icons/Icon";
 import { Link } from "react-router-dom";
 
