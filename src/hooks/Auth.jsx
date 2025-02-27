@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { loadUserAction } from "../redux/slices/a";
+import { loadUserAction } from "../redux/slices/authSlice";
 import rolePermission from "../config/rolePermission";
 
 function Auth() {
