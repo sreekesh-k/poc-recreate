@@ -2,12 +2,15 @@ import React from "react";
 import Card from "../../components/applications/card/Card";
 
 function Application() {
-  const data = [
+  const firstRow = [
     {
       imageUrl: "Card_BalancedScorecard",
       title: "MetricsLibrary",
       desc: "Define all metrics for the enterprise ro moniter",
     },
+  ];
+
+  const secondRow = [
     {
       imageUrl: "Card_Workflows",
       title: "WorkFlow Designer",
@@ -33,7 +36,8 @@ function Application() {
       title: "BIA Master",
       desc: "Define BIA Detaiks",
     },
-
+  ];
+  const thirdRow = [
     {
       imageUrl: "Card_DashboardDesigner",
       title: "Dashboard Designer",
@@ -41,9 +45,29 @@ function Application() {
     },
   ];
   return (
-    <main className=" flex w-full px-15 pt-10 mb-10">
-      <section className="grid grid-cols-5 flex-col items-center h-full w-full gap-4 flex-wrap">
-        {data.map((item, index) => (
+    <main className=" flex w-full px-15 pt-10 mb-10 flex-col gap-8">
+      <section className="grid grid-cols-5 gap-4 max-w-[68rem] flex-1 ">
+        {firstRow.map((item, index) => (
+          <Card
+            key={index}
+            imageUrl={item.imageUrl}
+            title={item.title}
+            desc={item.desc}
+          />
+        ))}
+      </section>
+      <section className="grid grid-cols-5 gap-4 max-w-[68rem] flex-1 ">
+        {secondRow.map((item, index) => (
+          <Card
+            key={index}
+            imageUrl={item.imageUrl}
+            title={item.title}
+            desc={item.desc}
+          />
+        ))}
+      </section>
+      <section className="grid grid-cols-5 gap-4 max-w-[68rem] flex-1 ">
+        {thirdRow.map((item, index) => (
           <Card
             key={index}
             imageUrl={item.imageUrl}
