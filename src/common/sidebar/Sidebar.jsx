@@ -12,6 +12,7 @@ function Sidebar() {
   const allowedRoutes = rolePermissions[userRole] || [];
   const handleClick = (name) => {
     dispatch(setActiveTabAction(name));
+    document.title = name;
   };
 
   const links = [
@@ -38,8 +39,7 @@ function Sidebar() {
           <br />
           CENTRAL
         </div>
-        <nav className="flex-col items-center gap-4 text-[.57rem] w-full h-full flex py-5 text-center">
-          {console.log(allowedRoutes)}
+        <nav className="flex-col items-center gap-5 text-[.57rem] w-full h-full flex py-5 text-center px-3">
           {links.map(
             (link) =>
               (link.url === "/" || allowedRoutes.includes(link.url)) && (

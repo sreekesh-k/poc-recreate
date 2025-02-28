@@ -1,84 +1,59 @@
 import React from "react";
+import Card from "../../components/applications/card/Card";
 
 function Application() {
   const data = [
     {
-      color: "green",
+      imageUrl: "Card_BalancedScorecard",
       title: "MetricsLibrary",
       desc: "Define all metrics for the enterprise ro moniter",
     },
     {
-      color: "blue",
-      title: "",
-      desc: "Download template to upload monthly",
+      imageUrl: "Card_Workflows",
+      title: "WorkFlow Designer",
+      desc: "Design custom review approval workflows for events , incidents and other risk and compliance occurrences",
     },
     {
-      color: "#5a4da3",
-      title: "Kri Value Upload",
-      desc: "Download template to upload monthly",
+      imageUrl: "Card_ActionMaster",
+      title: "Action Master",
+      desc: "Design custom review approval workflows for events , incidents and other risk and compliance occurrences",
     },
     {
-      color: "orange",
-      title: "Kri Rating Quarterly",
-      desc: "Kri Rating Quarterly",
-    },
-    {
-      color: "Green",
-      title: "Kri History",
-      desc: "view history of KRI",
-    },
-    {
-      color: "red",
-      title: "BIA Dashboard",
-      desc: "incase of item is empty you will see this text",
-    },
-    {
-      color: "red",
-      title: "BIA History",
-      desc: "incase of item is empty you will see this text",
-    },
-    {
-      color: "blue",
-      title: "BCP History",
-      desc: "incase of item is empty you will see this text",
-    },
-    {
-      color: "#5a4da3",
-      title: "BCP Document",
-      desc: "BCP Document department",
-    },
-    {
-      color: "lightblue",
-      title: "BCP Testing",
-      desc: "incase of item is empty you will see this text",
-    },
-    {
-      color: "orange",
-      title: "BCP Document (Branch)",
-      desc: "BCP Document (branch)",
-    },
-    {
-      color: "#5a4da3",
-      title: "BCP Document Consolidated",
-      desc: "BCP Document Consolidated",
-    },
-    {
-      color: "Green",
-      title: "BCP Dashboard",
-      desc: "BCP Dashboard download",
-    },
-    {
-      color: "#5a4da3",
-      title: "Vendor History",
-      desc: "Vendor History",
-    },
-    {
-      color: "orange",
+      imageUrl: "Card_ActionMaster",
       title: "Vendor Master",
-      desc: "incase of item is empty you will see this text",
+      desc: "Define Vendor Details",
+    },
+    {
+      imageUrl: "Card_RiskRegistry",
+      title: "BIA Master",
+      desc: "Define BIA Details",
+    },
+    {
+      imageUrl: "Card_DashboardDesigner",
+      title: "BIA Master",
+      desc: "Define BIA Detaiks",
+    },
+
+    {
+      imageUrl: "Card_DashboardDesigner",
+      title: "Dashboard Designer",
+      desc: "Design interactive dashboards for 360 degree analysis",
     },
   ];
-  return <div></div>;
+  return (
+    <main className=" flex w-full px-15 pt-10 mb-10">
+      <section className="grid grid-cols-5 flex-col items-center h-full w-full gap-4 flex-wrap">
+        {data.map((item, index) => (
+          <Card
+            key={index}
+            imageUrl={item.imageUrl}
+            title={item.title}
+            desc={item.desc}
+          />
+        ))}
+      </section>
+    </main>
+  );
 }
 
 export default Application;
